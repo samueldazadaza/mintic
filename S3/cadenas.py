@@ -18,3 +18,9 @@ print(fruta[2:])
 print(fruta[2:5:2])
 print(fruta.replace("a", "@"))
 
+for i in fruta: # la variable i va tomando los valores de los caracteres de fruta
+        print(i)
+
+
+
+

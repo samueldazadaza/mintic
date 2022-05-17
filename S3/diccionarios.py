@@ -19,3 +19,8 @@ datosPersonales['ventas'][3] = 5
 print(datosPersonales)
 print(type(datosPersonales), type(datosPersonales['casado']))
 print(datosPersonales['ventas'][3])
+
+for i in datosPersonales: # i toma los valores de las llaves
+        print(i)
+for i in datosPersonales:
+        print(datosPersonales[i])
