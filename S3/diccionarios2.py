@@ -1,7 +1,7 @@
 datosPersonales = dict(
 	nombre = 'Carlos',
- edad = 25,
- profesion = 'contador'
+	edad = 25,
+	profesion = 'contador'
 )
 print(datosPersonales)
 
