@@ -1,34 +1,34 @@
-# Descripción
-# Cadena de caracteres de la forma
-# Producto consultado : {idProducto} Descripción {dProducto}
-# Parte {pnProducto} Cantidad vendida {cvProducto} Stock
-# {sProducto} Comprador {nComprador} Documento
-# {cComprador} Fecha Venta {fVenta}
-# Ó
-# “No hay registro de venta de ese producto”
+'''Cadena de caracteres de la forma   
+Producto  consultado  :  {idProducto}  Descripción  {dProducto} 
+#Parte {pnProducto} Cantidad vendida {cvProducto} Stock 
+{sProducto} Comprador {nComprador} Documento 
+{cComprador} Fecha Venta {fVenta}
+“No hay registro de venta de ese producto” 
+Producto consultado : 2010  Descripción  bujía  #Parte  MS9512  Cantidad vendida  4  Stock  15  Comprador Carlos Rondon  Documento  1256  Fecha Venta  12/06/2020↩
+Producto consultado : 2010  Descripción  bujía  #Parte  ER6523  Cantidad vendida  9  Stock  36  Comprador Pedro Montes  Documento  1243  Fecha Venta  12/06/2020
+'''
+def AutoPartes(ventas:list):
+	diccionario = dict(zip(range(len(ventas)),ventas))
+	return diccionario
 
-def Autopartes(ventas: list):
-        diccionario = dict(zip(range(len(ventas)), ventas))
-        return diccionario
+def consultaRegistro(ventas: dict, idProducto):
+	sw = False
+	for i in ventas:
+		if ventas[i][0] == idProducto:
+			dProducto = ventas[i][1]
+			pnProducto = ventas[i][2]
+			cvProducto = ventas[i][3]
+			sProducto = ventas[i][4]
+			nComprador = ventas[i][5]
+			cComprador = ventas[i][6]
+			fVenta = ventas[i][7]
+			print(f'Producto consultado : {idProducto} Descripción {dProducto} Parte {pnProducto} Cantidad vendida {cvProducto} Stock {sProducto} Comprador {nComprador} Documento {cComprador} Fecha Venta {fVenta}')
+			sw = True
+	if sw == False:
+		print("No existe el producto")
+	return f""
 
-def consultaRegistro(ventas: dict, idPoducto):
-        #para preguntar en ventas si existe el producto
-        for i in ventas:
-                if ventas[i][0] == idProducto:
-                        dProducto = ventas[i][1]
-                        pnProducto = ventas[i][2]
-                        cvProducto = ventas[i][3]
-                        sProducto = ventas[i][4]
-                        nComprador = ventas[i][5]
-                        cComprador = ventas[i][6]
-                        fVenta = ventas[i][7]
-                        print(f"Producto consultado : {idProducto} Descripción {dProducto} Parte {pnProducto} Cantidad vendida {cvProducto} Stock {sProducto} Comprador {nComprador} Documento {cComprador} Fecha Venta {fVenta}")
-        return f""
-                # else:
-                #         print("No hay registro de venta de ese producto")
-                #print(ventas)
-
-ventas = [
+ventas =[
 	(2001,'rosca', 'PT29872',2,45,'Luis Molero',3456,'12/06/2020'),
 	(2010,'bujía', 'MS9512',4,15,'Carlos Rondon',1256,'12/06/2020'),
 	(2010,'bujía', 'ER6523',9,36,'Pedro Montes',1243,'12/06/2020'),
@@ -36,14 +36,4 @@ ventas = [
 	(9251,'piñón', 'EN5698',2,8,'Juan Peña',565,'12/06/2020')
 ]
 
-print(consultaRegistro(Autopartes(ventas),2010))
-
-#DE AQUI PARA ABAJO ES UNA PRUEBA ANTIGUA!!
-"""
-                        respuesta = f"Producto consultado : {idProducto} Descripción {dProducto} Parte {pnProducto} Cantidad vendida {cvProducto} Stock {sProducto} Comprador {nComprador} Documento {cComprador} Fecha Venta {fVenta}"
-                # else:
-                #         print("No hay registro de venta de ese producto")
-                #print(ventas)
-        return respuesta
-
-"""
+print(consultaRegistro(AutoPartes(ventas),2010))
