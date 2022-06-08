@@ -17,3 +17,5 @@ def listaPeliculas(rutaFileCsv: str) -> str:
         return f'Extensión inválida.'
 
 print(listaPeliculas(rutaFileCsv))
+
+#en el bot del imaster-mintic subir todo el codigo anterior
