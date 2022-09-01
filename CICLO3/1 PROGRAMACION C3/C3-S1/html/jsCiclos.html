@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //primer conteo
+        let conta = 1
+        while(conta <= 10) {
+            document.write(conta)
+            document.write('<br>')
+            conta++
+        }
+
+        //segundo conteo
+        document.write('<hr>')
+        conta = 1
+        do{
+            document.write(conta)
+            document.write('<br>')
+            conta++
+        }while(conta <=12)
+
+        //TERCER CONTEO
+        document.write('<hr>')
+        for(let i = 1; i<8; i++){
+            document.write(i)
+            document.write('<br>')
+        }
+
+        //array
+        document.write('<hr>')
+        const frutas = ["manzana", "pera", "piña", 45]
+        const ciudades = new Array("Bogota", "cali", "Pereira"); //crear array a partir de la clase array
+        for(let x in frutas){
+            document.write(frutas[x])
+            document.write('<br>')
+        }
+
+        //recorrer valor
+        for(let x of ciudades){
+            document.write(x)
+            document.write('<br>')
+        }
+
+
+
+    </script>
+</body>
+</html>
