@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Calcular {
-    public void carturaDatos(){
+    public void capturaDatos(){
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite el valor 1");
         float valor1 = sc.nextFloat();
@@ -27,6 +27,8 @@ public class Calcular {
     }
 
     public static void main(String[] args){ //cuando dice void el metodo no retorna ningun dato
-
+        Calcular obj1 = new Calcular();
+        obj1.capturaDatos();
+        System.out.println(obj1.suma(20, 15));
     }
 }
