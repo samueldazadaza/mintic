@@ -22,7 +22,7 @@ public class BecaUniversitaria {
     public double calcularInteresCompuesto(){
         return Math.round(pMonto * (Math.pow(1 + pInteres / 100, pTiempo)-1)); //se puede hacer la formula directamente en el return, (sin crear variable antes)
     }
-    public String compararInversion(){ //compararinversion sin parametros
+    public String compararInversion(){ //metodo compararinversion() sin parametros
         double diferencia = calcularInteresCompuesto() - calcularInteresSimple();
         if (diferencia == 0){
             return "No se obtuvo diferencia entre las proyecciones, revisar los parámetros de entrada.";
