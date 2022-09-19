@@ -7,4 +7,7 @@ public class MascotaHe {
     public void dormir(){
         System.out.println("La mascota duerme ZZZZ");
     }
+    public void sonidoAnimal(){
+        System.out.println("Los animales hacen un sonido");
+    }
 }
